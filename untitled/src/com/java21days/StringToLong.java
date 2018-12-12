@@ -5,59 +5,49 @@ import java.util.Scanner;
 public class StringToLong {
 
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s = "";
+        System.out.println("wprowadź słownie nazwę liczby od jeden do dziesięć: ");
+        Long count = null;
 
-        long count;
         do {
-            System.out.println("wprowadź słownie nazwę liczby od jeden do dziesięć: ");
-            Scanner in = new Scanner(System.in);
-            String s = in.next();
-            count = 1;
+            s = in.next();
             switch (s){
                 case "jeden":
-                    count = 1;
-                    System.out.println(count);
+                    count = 1l;
                     break;
                 case "dwa":
-                    count = 2;
-                    System.out.println(count);
+                    count = 2l;
                     break;
                 case "trzy":
-                    count = 3;
-                    System.out.println(count);
+                    count = 3l;
                     break;
                 case "cztery":
-                    count = 4;
-                    System.out.println(count);
+                    count = 4l;
                     break;
                 case "pięć":
-                    count = 5;
-                    System.out.println(count);
+                    count = 5l;
                     break;
                 case "sześć":
-                    count = 6;
-                    System.out.println(count);
+                    count = 6l;
                     break;
                 case "siedem":
-                    count = 7;
-                    System.out.println(count);
+                    count = 7l;
                     break;
                 case "osiem":
-                    count = 8;
-                    System.out.println(count);
+                    count = 8l;
                     break;
                 case "dziewięć":
-                    System.out.println(count);
-                    count = 9;
+                    count = 9l;
                     break;
                 case "dziesięć":
-                    System.out.println(count);
-                    count = 10;
+                    count = 10l;
                     break;
                 default:
                     System.out.println("To nie jest nazwa liczby od 1 do 10 !");
                     break;
                 }
-            } while (count < 11);
+            } while (count == null);
+        System.out.println(count);
     }
-
 }
