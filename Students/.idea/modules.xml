@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Students.iml" filepath="$PROJECT_DIR$/Students.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../postgreSqlTutor/src/test/test.iml" filepath="$PROJECT_DIR$/../postgreSqlTutor/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../postgreSqlTutor/src/test/test1.iml" filepath="$PROJECT_DIR$/../postgreSqlTutor/src/test/test1.iml" />
     </modules>
   </component>
 </project>

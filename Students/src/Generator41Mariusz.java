@@ -1,8 +1,16 @@
 // Generator.java
+//
+//import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+//import org.jetbrains.annotations.Nullable;
+//
+//import java.io.PrintWriter;
+//import java.io.FileNotFoundException;
+//import java.io.PrintWriter;
 
+import java.io.FileWriter;
 import java.util.Random;
 
-public class Generator41Mariusz {
+public class Generator41Mariusz<gName> {
 
     private final static String smallLetters = "qwertyuiopasdfghjklzxcvbnm";
     private final static String bigLetters = smallLetters.toUpperCase();
@@ -10,19 +18,20 @@ public class Generator41Mariusz {
     private final static String numbers = "1234567890";
 
     public static void main(String[] args) {
-        System.out.println("Test gNumber " + gNumber(5));
+        System.out.println("Test gNumber " + gNumber(9));
         System.out.println("Test gNumberRange " + gNumberRange(10, 20));
         System.out.println("Test gDate " + gDate(1990, 2010));
         System.out.println("Test gString " + gString(5));
         System.out.println("Test gPasswd " + gPasswd(10));
         System.out.println("Test gEmail " + gEmail(6));
-        System.out.println("Test gName " + gName(Name.Male));
+        System.out.println("Test gName " + gName(Name.Female));
+        System.out.println("Test gLastName " + gLastName(LastName.Female));
     }
 
     public static String gNumber(int length) {
         String number = "";
         for (int i = 0; i < length; i++) {
-            number += new Random().nextInt(10);
+            number += new Random().nextInt(17);
         }
         return number;
     }
@@ -77,6 +86,7 @@ public class Generator41Mariusz {
     }
 
 
+
     public static String gName(Name g) {
         if(g == Name.Male) {
             return Name.Male.getName();
@@ -86,4 +96,37 @@ public class Generator41Mariusz {
         return null;
     }
 
-}
+
+
+
+    public static String gLastName(LastName g) {
+        if(g == LastName.Male) {
+            return LastName.Male.getLastName();
+        } else if(g == LastName.Female) {
+            return LastName.Female.getLastName();
+        }
+        else if(g == LastName.Unisex) {
+            return LastName.Unisex.getLastName();
+        }
+        return null;
+
+
+    }
+
+//    public static void FileCSVWriter(String[] args) {
+//
+//        String filePath = "D:\\data.csv";
+//        int number = 1234567;
+//        FileWriter fileWriter = null;
+//
+//        try {
+//            fileWriter = new FileWriter(filePath);
+//            fileWriter.write(Integer.toString(number));
+//        } finally {
+//            if (fileWriter != null) {
+//                fileWriter.close();
+            }
+//        }
+//    }
+
+//}
